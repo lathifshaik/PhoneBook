@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Register</h2>
+    <form method="POST" action="{{ url_for('register') }}">
+        
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="pass"><br>
+        <label for="security_question">Security Question: What is your pet's name?</label>
+        <input type="text" id="security_question" name="security_answer" required>
+        <input type="submit" value="Register">
+    </form>
+    
+
+</body>
+</html>

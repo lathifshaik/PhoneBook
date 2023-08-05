@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Welcome to the Phonebook</h2>
+    {% if 'username' in session %}
+        <p>Welcome, {{ session['username'] }}! <a href="{{ url_for('logout') }}">Logout</a></p>
+        <!-- You will need to create the 'logout' route in your Flask app -->
+        <a href="{{ url_for('new_contact') }}">Add new contact</a>
+        <a href="{{ url_for('favourites') }}">See favourite contacts</a>
+        <!-- You will need to create the 'new_contact' and 'favourites' routes in your Flask app -->
+    {% else %}
+        <p>You are not logged in. <a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a></p>
+        <!-- You will need to create the 'login' and 'register' routes in your Flask app -->
+    {% endif %}
+</body>
+</html>
