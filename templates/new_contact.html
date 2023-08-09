@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <h2>Add New Contact</h2>
-    <form method="POST">
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+      <h1 class="display-3 fw-bold">Add New Contact</h1>
+      
+      
+      <div class="d-flex gap-3 justify-content-center lead fw-normal">
+        <form method="POST">
     
-        Name: <input type="text" name="name"><br>
-        Phone: <input type="text" name="phone"><br>
-        <input type="submit" value="Add">
-    </form>
-</body>
-</html>
+            Name <input type="text" placeholder="Name"  class="form-control" name="name">
+            Phone <input type="text" placeholder="Phone Number" class="form-control"  name="phone">
+            <input type="submit"class="btn btn-primary mb-2" value="Add">
+        </form>
+        
+      </div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+
+    
+    
+
+{% endblock %}

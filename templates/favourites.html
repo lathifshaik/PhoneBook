@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "layout.html" %}
+
+{% block main %}
     <h2>Favourite Contacts</h2>
     <ul>
     {% for contact in contacts %}
@@ -14,5 +14,5 @@
     {% endfor %}
     </ul>
     <a href="{{ url_for('new_contact') }}">Add new contact</a>
-</body>
-</html>
+
+{% endblock %}
